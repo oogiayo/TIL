@@ -44,6 +44,7 @@ public class Solution_d3_9280_주차타워 {
 				else {  // 퇴장이면
 					num *= -1;
 					int empty = -1;
+					
 					boolean check = false;  // 출차여부 체크
 					for(int k=0; k<n; k++) {
 						if(space[k]==num) {

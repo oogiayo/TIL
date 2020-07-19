@@ -24,7 +24,10 @@ public class Main_bj_1697_숨바꼭질 {
 		visited[N] = true;
 		while(!q.isEmpty()) {
 			Position p = q.poll();
-			if(p.x == K) System.out.println(p.sec);
+			if(p.x == K) {
+				System.out.println(p.sec);
+				break;
+			}
 			
 			dx = new int[] {-1, 1, p.x};
 			for(int k=0; k<3; k++) {

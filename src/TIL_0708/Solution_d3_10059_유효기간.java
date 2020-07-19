@@ -10,13 +10,13 @@ public class Solution_d3_10059_유효기간 {
 			int AB = N/100;
 			int CD = N%100;
 			String ans = "";
-			if(AB<13 && CD<13) {
+			if(0<AB && AB<13 && 0<CD && CD<13) {
 				ans = "AMBIGUOUS";
 			}
-			else if(AB<13) {
+			else if(0<AB && AB<13) {
 				ans = "MMYY";
 			}
-			else if(CD<13) {
+			else if(0<CD && CD<13) {
 				ans = "YYMM";
 			}
 			else {

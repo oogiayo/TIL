@@ -8,7 +8,7 @@ public class Solution_d3_8888_시험 {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int Tc = sc.nextInt();
+		int Tc = sc.nextInt(); 
 		for(int t=1; t<=Tc; t++) {
 			N = sc.nextInt(); // 학생 수
 			T = sc.nextInt(); // 문제 개수

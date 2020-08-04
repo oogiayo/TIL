@@ -1,16 +1,37 @@
-T = int(input())
+# def digitSum(n):
+#     if n<10:
+#         return n
+#     else:
+#         next = 0
+#         while n>0:
+#             next += n%10
+#             n //= 10
+#         return digitSum(next)
 
-for tc in range(1, T+1):
-    N = int(input())
+# T = int(input())
 
-    while True:
-        if len(str(N))==1:
-            break
-        else:
-            ans = 0
-            while N>0:
-                ans += N%10
-                N = N//10
-            N = ans
+# for tc in range(1, T+1):
+#     N = int(input())
 
-    print(f'#{tc} {N}')
+#     print(f'#{tc} {digitSum(N)}')
+
+
+
+# m = [0]*(10^18+1)
+
+# T = int(input())
+# for tc in range(1, T+1):
+#     N0 = int(input())
+#     N = N0
+#     while N>=10:
+#         if m[N]!=0:
+#             N = m[N]
+#             break
+
+#         next = 0
+#         while N>0:
+#             next += N%10
+#             N //= 10
+#         N = next
+        
+#     print(f'#{tc} {N}')

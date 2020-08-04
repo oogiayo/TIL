@@ -13,7 +13,7 @@ from collections import deque
 
 T = 10
 for tc in range(1, T+1):
-    length = 7 # int(input())
+    length = int(input())
 
     table = [[] for r in range(0, length)]
 

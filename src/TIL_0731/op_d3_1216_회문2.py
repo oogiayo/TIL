@@ -1,5 +1,5 @@
 def palVer(r1, r2, c):
-    if r2-r1==-1 or r2-r1==0:
+    if r2==r1+1 or r2==r1:
         return True
     else:
         if puzzle[r1][c] == puzzle[r2][c]:
@@ -8,7 +8,7 @@ def palVer(r1, r2, c):
             return False
 
 def palHor(r, c1, c2):
-    if c2-c1==-1 or c2-c1==0:
+    if c2==c1+1 or c2==c1:
         return True
     else:
         if puzzle[r][c1] == puzzle[r][c2]:

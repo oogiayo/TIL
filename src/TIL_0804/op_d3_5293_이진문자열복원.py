@@ -1,7 +1,7 @@
 def permutation(ans, idx):
-    if idx==len(ans):
-        if len(ansList)==1:
+    if len(ansList)==1:
             return
+    if idx==len(ans):
         word = ''
         for i in range(0, N-2):
             if ans[i][1]==ans[i+1][0]:

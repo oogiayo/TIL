@@ -109,3 +109,57 @@ end addtoLast()
 > 양쪽 방향으로 순회할 수 있도록 노드를 연결한 리스트
 >
 > 두 개의 링크 필드와 한 개의 데이터필드로 구성
+
+
+
+### 1.5 LinkedList 만들기 예시
+
+- Stack의 `push`와 `pop` 구현
+
+```java
+public class Node {
+	 String data;
+	 Node link;
+	 
+	 public Node(String data, Node link) {
+		 super();
+		 this.data = data;
+		 this.link = link;
+	 }
+	 
+	 public Node(String data) {
+		 this.data = data;
+	 }
+}
+```
+
+```java
+public class SimpleLinkedList {
+	
+	private Node head;
+	
+	public void addFirstNode(String data) {
+		Node newNode = new Node(data, head);
+		head = newNode;
+	}
+	
+	public void popFirstNode() {
+		Node secondNode = head.link;
+		head.link = null;
+		head = secondNode;
+	}
+	
+	public void printList() {
+		
+		for (Node currNode=head; currNode!=null; currNode=currNode.link) {
+			System.out.print(currNode.data + " ");
+		}
+		System.out.println();
+	}
+	
+}
+```
+
+
+
+- GC (Garbage Collecter) : 참조되지 않는 객체는 자동으로 제거됨(?)

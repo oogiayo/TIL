@@ -1,7 +1,7 @@
 package TIL_0806;
 import java.util.*;
 
-public class op_Main_bj_1525_∆€¡Ò {
+public class op_Main_bj_1525_ÌçºÏ¶ê {
 	static int[][] arr;
 	static int[] dr = {-1,1,0,0};
 	static int[] dc = {0,0,-1,1};

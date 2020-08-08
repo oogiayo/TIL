@@ -1,4 +1,5 @@
-import java.util.*;
+package Java;
+import java.util.Arrays;
 
 public class 좋은아침원본 {
 	static char[] arr = {'A', 'B', 'C'};

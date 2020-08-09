@@ -1,36 +1,39 @@
-package TIL_0808;
-import java.util.*;
+package TIL_0809;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-public class op_Main_bj_11723_집합 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int M = sc.nextInt();
+public class Main_bj_11723_집합 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		int M = Integer.valueOf(bf.readLine());
 		int S = 0;
+		StringBuilder sb = new StringBuilder();
 		for(int i=0; i<M; i++) {
-			String cmd = sc.next();
-			if(cmd.equals("all")) {
+			String[] line = bf.readLine().split(" ");
+			if(line[0].equals("all")) {
 			 	S = 1048575;
 			}
-			else if(cmd.equals("empty")) {
+			else if(line[0].equals("empty")) {
 				S = 0;
 			}
 			else {
-				int x = sc.nextInt();
-				if(cmd.equals("add")) {
+				int x = Integer.valueOf(line[1]);
+				if(line[0].equals("add")) {
 					S |= (1<<x-1);
 				}
-				if(cmd.equals("remove")) {
+				if(line[0].equals("remove")) {
 					S &= ~(1<<x-1);
 				}
-				if(cmd.equals("check")) {
+				if(line[0].equals("check")) {
 					if((S&(1<<x-1))==0) {
-						System.out.println(0);
+						sb.append("0\n");
 					}
 					else {
-						System.out.println(1);
+						sb.append("1\n");
 					}
 				}
-				if(cmd.equals("toggle")) {
+				if(line[0].equals("toggle")) {
 					if((S&(1<<x-1))==0) {
 						S |= (1<<x-1);
 					}
@@ -39,14 +42,9 @@ public class op_Main_bj_11723_집합 {
 					}
 				}
 			}
-//			System.out.println(S);
-			
 		}
-		
+		System.out.print(sb);
 	}
-	
-
-	
 }//end of class
 
 

@@ -1,6 +1,6 @@
 package TIL_0905;
 import java.util.*;
-public class kakao_04 {
+public class kakao_04_fail {
 	public static void main(String[] args) {
 		String[] words = {"frozen"};
 		String[] queries = {"fro???"};

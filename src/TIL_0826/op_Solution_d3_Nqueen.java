@@ -26,7 +26,7 @@ public class op_Solution_d3_Nqueen {
 //	
 //	private static void nQueen(int[][] ans, int r) {
 //		for(int c=0; c<N; c++) {
-//			if(visited[c]==false) {
+//			if(visited[c]==false) { 
 //				visited[c] = true;
 //				ans[r][c] = 1;
 //			}

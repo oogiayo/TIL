@@ -16,7 +16,7 @@ public class op_Main_bj_11066_파일합치기 {
 				chapter[i] = Integer.valueOf(st.nextToken());
 			}
 			for(int i=1; i<K-1; i++) {
-				for(int j=i; j<K; j++) {
+				for(int j=i; j<K; j++) { 
 					int sub = Math.min(m[j-1], m[j]);
 					for(int k=j-i; k<=j; k++) {
 						sub += chapter[k];

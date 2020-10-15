@@ -5,12 +5,16 @@ def play(r0, c0, k):
     isFirst = True
     while q:
         pr, pc, score = q.popleft()
+        # print(pr, pc, score)
+
         # print(pr, pc, k, '점수', score)
         # 출발위치(r, c)로 돌아올 경우 게임종료
         if pr==r0 and pc==c0:
             if isFirst:
                 isFirst = False
             else:
+                # if score>1:
+                #     print(r0, c0, score)
                 return score
         
         # 같은 방향으로 지나갔던 곳이면 무한루프 => 0 리턴
@@ -84,7 +88,6 @@ for tc in range(1, T+1):
     mapp = [[0]*N for _ in range(0, N)]
     startPoints = []
     wormholes = [[] for _ in range(0, 11)]
-    visited = [[[False]*4 for _ in range(0, N)] for _ in range(0, N)]
     for r in range(0, N):
         line = list(map(int, input().split()))
         for c in range(0, N):
@@ -102,9 +105,11 @@ for tc in range(1, T+1):
     for (r0, c0) in startPoints:        
         # 초기 방향
         for k in range(0, 4):
-            # if tc==4 and r0==0 and c0==2 and k==3:
+            visited = [[[False]*4 for _ in range(0, N)] for _ in range(0, N)]
             game_score = play(r0, c0, k)
             if game_score > ans:
                 ans = game_score
+                if ans==17:
+                    print(r0, c0, k)
 
     print(f'#{tc} {ans}')

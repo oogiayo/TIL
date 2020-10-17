@@ -7,6 +7,8 @@ def play(r0, c0, k):
         pr, pc, score = q.popleft()
         # print(pr, pc, score)
 
+        if score >= 18:
+            print(r0, c0, k)
         # print(pr, pc, k, '점수', score)
         # 출발위치(r, c)로 돌아올 경우 게임종료
         if pr==r0 and pc==c0:
@@ -109,7 +111,5 @@ for tc in range(1, T+1):
             game_score = play(r0, c0, k)
             if game_score > ans:
                 ans = game_score
-                if ans==17:
-                    print(r0, c0, k)
 
     print(f'#{tc} {ans}')

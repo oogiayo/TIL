@@ -1,7 +1,7 @@
-package Java;
+package TIL_1018;
 import java.util.Arrays;
 
-public class 좋은아침원본 {
+public class goodmorning_review {
 	static char[] arr = {'A', 'B', 'C'};
 	static boolean[] visited = new boolean[arr.length];
 	
